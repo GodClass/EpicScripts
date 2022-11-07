@@ -1,5 +1,13 @@
+local BE = Instance.new("BindableEvent")
+
+BE.Event:connect(function()
+    setclipboard("https://discord.gg/R58FA58EhU")
+end)
+
 game:GetService("StarterGui"):SetCore("SendNotification", {
 	Title = "ATTENTION USERS!!";
 	Text = "The script has been changed to a new link!\nPlease click the button below and paste the link in your browser!!";
 	Duration = math.huge;
+	Callback = BE:Fire();
+	Button1 = "CLICK HERE";
 })
